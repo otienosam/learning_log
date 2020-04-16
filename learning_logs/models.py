@@ -28,9 +28,10 @@ class Entry(models.Model):
     #entries in the order they were created and to place a timestamp next to
     #each entry.
 
-    class Meta:#nested class to hold extra information for managing a model
-    verbose_name_plural = 'entries'#used when there is need to refer to more than
-    #one entry by django
+    class Meta:
+        #nested class to hold extra information for managing a model
+        verbose_name_plural = 'entries'#used when there is need to refer
+        #to more than one entry by django
 
     def __str__(self):
         """Return a string representation of the model."""
