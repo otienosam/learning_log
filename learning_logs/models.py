@@ -11,3 +11,8 @@ class Topic(models.Model):
     def __str__(self):#diplays simple representation of a model
         """Return a string representation of the model."""
         return self.text
+#Whenever we want to modify the data that Learning Log manages, we’llfollow
+# these three steps:
+     # modify models.py,
+     # call makemigrations on learning_logs ,
+     #and tell Django to migrate the project.
