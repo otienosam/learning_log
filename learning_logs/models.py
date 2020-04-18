@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Topic(models.Model):
@@ -6,7 +7,9 @@ class Topic(models.Model):
     text = models.CharField(max_length=200)#data that’s made up of characters,
     # or text
     date_added = models.DateTimeField(auto_now_add=True)#automatically set
-    #to the current date and time whenever the user creates a new topic.
+    #to the current date and time whenever the user creates a new topic
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)#foreign
+    #relationship added to the uset model
 
     def __str__(self):#diplays simple representation of a model
         """Return a string representation of the model."""

@@ -122,3 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# My settings
+LOGIN_URL = 'users:login'#when an unauthenticated user requests a page
+#protected by the @login_required decorator, Django will send the user
+#to the URL defined by LOGIN_URL
