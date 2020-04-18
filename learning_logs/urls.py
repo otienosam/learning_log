@@ -12,4 +12,9 @@ path('', views.index, name='index'),
 # views.index argument speccifies to call the index function from the view module
 #the third argument provides the name index for this URL pattern so we can
 #refer to it in other code sections
+
+# Page that shows all topics.
+path('topics/', views.topics, name='topics'),
+# Detail page for a single topic.
+path('topics/<int:topic_id>/', views.topic, name='topic'),
 ]

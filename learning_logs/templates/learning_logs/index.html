@@ -1,3 +1,9 @@
-<p>Learning Log</p>
+{% extends "learning_logs/base.html" %}
+<!-- extends keyword signifies that its inheriting from the enclosed
+parent file  -->
+{% block content %}
 <p>Learning Log helps you keep track of your learning, for any topic you're
 learning about.</p>
+{% endblock content %}
+<!--Everything not being inherited from the parent template goes
+inside the content block -->

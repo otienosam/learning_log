@@ -1,0 +1,11 @@
+<p>
+<a href="{% url 'learning_logs:index' %}">Learning Log</a> -<!--This dash
+can be ommitted or not -->
+<a href="{% url 'learning_logs:topics' %}">Topics</a>
+</p>
+
+{% block content %}{% endblock content %}
+<!--learning_logs is the namespace and index is a uniquely named URL pattern-->
+<!--this template tag generates information to be displayed on the page-->
+<!--block content is the placeholder. The child template defines what goes in
+the content block -->
