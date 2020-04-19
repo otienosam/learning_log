@@ -34,6 +34,9 @@ INSTALLED_APPS = [
      # My apps
      'learning_logs',
      'users',
+
+     # Third party apps.
+     'bootstrap4',
      # Default django apps.
     'django.contrib.admin',
     'django.contrib.auth',
@@ -127,3 +130,7 @@ STATIC_URL = '/static/'
 LOGIN_URL = 'users:login'#when an unauthenticated user requests a page
 #protected by the @login_required decorator, Django will send the user
 #to the URL defined by LOGIN_URL
+
+# Heroku settings.
+import django_heroku
+django_heroku.settings(locals())

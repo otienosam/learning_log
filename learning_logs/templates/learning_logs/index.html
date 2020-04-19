@@ -1,9 +1,15 @@
 {% extends "learning_logs/base.html" %}
-<!-- extends keyword signifies that its inheriting from the enclosed
-parent file  -->
-{% block content %}
-<p>Learning Log helps you keep track of your learning, for any topic you're
-learning about.</p>
-{% endblock content %}
-<!--Everything not being inherited from the parent template goes
-inside the content block -->
+
+{% block page_header %}
+<div class="jumbotron"><!--A jumbotron is  a div element with a set of
+  styling directives applied to it-->
+  <h1 class="display-3">Track your learning.</h1><!--adds a thin­ner
+     and taller look to this particular header-->
+  <p class="lead">Make your own Learning Log, and keep a list of the
+  topics you're learning about. Whenever you learn something new
+  about a topic, make an entry summarizing what you've learned.</p>
+  <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}"
+  role="button">Register &raquo;</a><!---->
+</div>
+
+{% endblock page_header %}
